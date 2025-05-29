@@ -1,0 +1,57 @@
+{
+    "network" : [
+       {
+            "addr"  : "udp://192.168.1.48:5555",
+            "data_format" : "17f",
+            "topic" : "xwc",
+            "timeo" : 100
+        },
+        {
+            "channels" : 16,
+            "init_cmd" : [ 135.0 , 90.0 ],
+            "actuation_range" : [ 270, 180 ], 
+            "min_max_pwr" : [ [500, 2500], [500,2500] ],
+            "safety_bounds" : [ null, [10,170] ]
+        },
+        {
+            "port"      : "/dev/ttyUSB0",
+            "port_config" : {
+                "baudrate" : 9600,
+                "stopbits" : 1
+            },
+            "min_interval"  : 0.00005
+        },
+        {
+            "port"      : "/dev/ttyUSB1",
+            "port_config" : {
+                "baudrate" : 9600,
+                "stopbits" : 1
+            },
+            "min_interval"  : 0.00005
+        },
+        {
+            "host_addr" : "192.168.1.100"
+        }
+    ],
+    "camera" : {
+        "resolution" : [1936,1216],
+        "stream_resolution" : [320,256],
+        "fps" : 30,
+        "aeg_settings" : {
+            "ag_max_limit"  : 10,
+            "ae_max_limit"  : 100000,
+            "exposure"      : 50000,
+            "gain"          : 0
+        },
+        "awb_settings" : {
+            "wb_coef_red"   : 1.0,
+            "wb_coef_green" : 1.0,
+            "wb_coef_blue"  : 1.0
+        },
+        "gstream_config" : {
+            "sink_port" : "4444",
+            "sink_ip"   : "224.0.0.1"
+        }
+    },
+    "controller" : {}
+}

@@ -12,17 +12,24 @@
             "actuation_range" : [ 270, 180 ], 
             "min_max_pwr" : [ [500, 2500], [500,2500] ],
             "safety_bounds" : [ null, [10,170] ]
+        },
+        {
+            "port"      : "/dev/ttyUSB0",
+            "port_config" : {
+                "baudrate" : 9600,
+                "stopbits" : 1
+            },
+            "min_interval"  : 0.00005
+        },
+        {
+            "port"      : "/dev/ttyUSB1",
+            "port_config" : {
+                "baudrate" : 9600,
+                "stopbits" : 1
+            },
+            "min_interval"  : 0.00005
         }
     ],
-    "camera" : {
-        "resolution" : [1280,800],
-        "lidar_resolution" : [1280,720],
-        "stream_resolution" : [640,360],
-        "fps" : 30,
-        "gstream_config" : {
-            "sink_port" : "4444",
-            "sink_ip"   : "192.168.1.50"
-        }
-    },
+    "camera" : {},
     "controller" : {}
 }
